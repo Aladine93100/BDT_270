@@ -1,0 +1,64 @@
+body {
+	background-color: black;
+}
+
+.page-header {
+	font-family: 'Orbitron', sans-serif;
+	color: green;
+	background-color: black;
+}
+
+#retour {
+	display: none;
+}
+
+.questionnaire1 {
+	display: none;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.questionnaire2 {
+	display: none;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.intro2 {
+	color: green;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#hall1 {
+	display: none;
+}
+
+#hall2 {
+	display: none;
+}
+
+.questionnaire3 {
+	display: none;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#collectif {
+	display: none;
+}
+
+#poubelle {
+	display: none;
+}
+
+#foot {
+	display: none;
+}
+
+#enfant {
+	display: none;
+}
+
+#passage {
+	display: none;
+}

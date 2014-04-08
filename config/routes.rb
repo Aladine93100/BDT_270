@@ -1,9 +1,12 @@
 Bdt270::Application.routes.draw do
+resources :messages, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'message#new'
+
+  get '/adresses' => 'adresses#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
