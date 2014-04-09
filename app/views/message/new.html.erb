@@ -2,105 +2,123 @@
 	<h1>Amicale des Beaudottes</h1>  <button id="retour" <%= link_to "Retour", root_path %> </button>
 </div>
 
-<div class="row menu1">
-	<div class="col-md-offset-4 col-md-4 col-md-offset-4">
-		<button type="button" class="btn btn-default">Mon appartement</button></br>
-	</div>
-	<div class="questionnaire1">
-		<input type="texte" value="nom"> </br>
-		<input type="text" value="prénom"> </br>
-		<input type="texte" value="Téléphone"> </br>
-		<select id="voie" class="form-control">
-			<option>Voie</option>
-			<option>Galliéni</option>
-			<option>Allende</option>
-			<option>Dhuys</option>
-			<option>Gambetta</option>
-		</select>
-		<textarea class="form-control" rows="3"></textarea>
-	</div>
-</div>
 
-<div class="row menu2">
-	<div class="col-md-offset-4 col-md-4 col-md-offset-4">
-		<button type="button" class="btn btn-default">Espaces intérieurs</button>
-	</div>
+		<div class="row menu1">
+			<div class="col-md-offset-4 col-md-4 col-md-offset-4">
+				<button type="button" class="btn btn-default">Mon appartement</button></br>
+			</div>
+			<div class="questionnaire1">
+				<input type="texte" value="nom"> </br>
+				<input type="text" value="prénom"> </br>
+				<input type="texte" value="Téléphone"> </br>
+				<select id="voie" class="form-control">
+					<option>Voie</option>
+					<option>Galliéni</option>
+					<option>Allende</option>
+					<option>Dhuys</option>
+					<option>Gambetta</option>
+				</select>
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+		</div>
 
-	<div class="row">
-		<div class="questionnaire2">
-			<button type="button" class="btn btn-default"> Hall d'entrée </button> <button type="button" class="btn btn-default"> Hall à l'étage</button>
+		<div class="row menu2">
+			<div class="col-md-offset-4 col-md-4 col-md-offset-4">
+				<button type="button" class="btn btn-default">Espaces intérieurs</button>
+			</div>
+		</div>
+
+			<div class="row">
+				<div class="questionnaire2">
+					<button type="button" class="btn btn-default hall1"> Hall d'entrée </button> <button type="button" class="btn btn-default hall2"> Hall à l'étage</button>
+				</div>	
+				<div id="hall1-bis">
+					<input type="texte" value="nom"> </br>
+					<input type="text" value="prénom"> </br>
+					<input type="texte" value="Téléphone"> </br>
+					<select id="street" class="form-control">
+						<option>street</option>
+						<option>Galliéni</option>
+						<option>Allende</option>
+						<option>Dhuys</option>
+						<option>Gambetta</option>
+					</select>
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div id="hall2-bis">
+			<input type="texte" value="nom"> </br>
+			<input type="text" value="prénom"> </br>
+			<input type="texte" value="Téléphone"> </br>
+			<select id="voie" class="form-control">
+				<option>Voie</option>
+				<option>Galliéni</option>
+				<option>Allende</option>
+				<option>Dhuys</option>
+				<option>Gambetta</option>
+			</select>
+			<textarea class="form-control" rows="3"></textarea>
 		</div>	
-		<div id="hall1">
-			<input type="texte" value="nom"> </br>
-			<input type="text" value="prénom"> </br>
-			<input type="texte" value="Téléphone"> </br>
-			<select id="voie" class="form-control">
-				<option>Voie</option>
-				<option>Galliéni</option>
-				<option>Allende</option>
-				<option>Dhuys</option>
-				<option>Gambetta</option>
-			</select>
-			<textarea class="form-control" rows="3"></textarea>
+
+		<div class="row menu3">
+			<div class="col-md-offset-4 col-md-4 col-md-offset-4">
+				<button type="button" class="btn btn-default">Espaces extérieurs</button>
+			</div>
 		</div>
 
-		<div id="hall2">
-			<input type="texte" value="nom"> </br>
-			<input type="text" value="prénom"> </br>
-			<input type="texte" value="Téléphone"> </br>
-			<select id="voie" class="form-control">
-				<option>Voie</option>
-				<option>Galliéni</option>
-				<option>Allende</option>
-				<option>Dhuys</option>
-				<option>Gambetta</option>
-			</select>
-			<textarea class="form-control" rows="3"></textarea>
+			<div class="questionnaire3">
+				<button type="button" class="btn btn-default passage"> Sur une voie de passage </button> <button type="button" class="btn btn-default collectif"> Un équipement collectif </button>
+			</div>
+
+			<div id="collectif">
+				<button type="button" class="btn btn-default poubelle"> Local à poubelles </button> <button type="button" class="btn btn-default foot"> Terrain de foot </button> 
+				<button type="button" class="btn btn-default enfant"> Espace enfant </button>
+			</div>
+
+			<div id="poubelle">
+				<input type="texte" value="nom"> </br>
+				<input type="text" value="prénom"> </br>
+				<input type="texte" value="Téléphone"> </br>
+				<select id="voie" class="form-control">
+					<option>Voie</option>
+					<option>Galliéni</option>
+					<option>Allende</option>
+					<option>Dhuys</option>
+					<option>Gambetta</option>
+				</select>
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+
+			<div id="foot">
+				<textarea class="form-control" rows="3"></textarea>
+				<input type="texte" value="nom"> </br>
+				<input type="text" value="prénom"> </br>
+				<input type="texte" value="Téléphone"> </br>
+			</div>
+
+			<div id="enfant">
+				<textarea class="form-control" rows="3"></textarea>
+				<input type="texte" value="nom"> </br>
+				<input type="text" value="prénom"> </br>
+				<input type="texte" value="Téléphone"> </br>
+			</div>
+
+			<div class="passage_bis">
+				<input type="texte" value="nom"> </br>
+				<input type="text" value="prénom"> </br>
+				<input type="texte" value="Téléphone"> </br>
+				<select id="voie" class="form-control">
+					<option>Voie</option>
+					<option>Galliéni</option>
+					<option>Allende</option>
+					<option>Dhuys</option>
+					<option>Gambetta</option>
+				</select>
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
 		</div>
-	</div>	
-</div>
-
-<div class="row menu3">
-	<div class="col-md-offset-4 col-md-4 col-md-offset-4">
-		<button type="button" class="btn btn-default">Espaces extérieurs</button>
 	</div>
-
-	<div class="questionnaire3">
-		<button type="button" class="btn btn-default passage"> Sur une voie de passage </button> <button type="button" class="btn btn-default collectif"> Un équipement collectif </button>
-	</div>
-
-	<div id="collectif">
-		<button type="button" class="btn btn-default poubelle"> Local à poubelles </button> <button type="button" class="btn btn-default foot"> Terrain de foot </button> 
-		<button type="button" class="btn btn-default enfant"> Espace enfant </button>
-	</div>
-
-	<div id="poubelle">
-		<input type="texte" value="nom"> </br>
-		<input type="text" value="prénom"> </br>
-		<input type="texte" value="Téléphone"> </br>
-		<select id="voie" class="form-control">
-			<option>Voie</option>
-			<option>Galliéni</option>
-			<option>Allende</option>
-			<option>Dhuys</option>
-			<option>Gambetta</option>
-		</select>
-		<textarea class="form-control" rows="3"></textarea>
-	</div>
-
-	<div id="foot">
-		<textarea class="form-control" rows="3"></textarea>
-		<input type="texte" value="nom"> </br>
-		<input type="text" value="prénom"> </br>
-		<input type="texte" value="Téléphone"> </br>
-	</div>
-
-	<div id="foot">
-		<textarea class="form-control" rows="3"></textarea>
-		<input type="texte" value="nom"> </br>
-		<input type="text" value="prénom"> </br>
-		<input type="texte" value="Téléphone"> </br>
-	</div>
-</div>
 </div>
 </div>

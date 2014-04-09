@@ -8,6 +8,15 @@ body {
 	background-color: black;
 }
 
+.panel {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.btn {
+	color: green;
+}
+
 #retour {
 	display: none;
 }
@@ -29,11 +38,11 @@ body {
 	font-family: 'Orbitron', sans-serif;
 }
 
-#hall1 {
+#hall1-bis {
 	display: none;
 }
 
-#hall2 {
+#hall2-bis {
 	display: none;
 }
 
@@ -59,6 +68,13 @@ body {
 	display: none;
 }
 
-#passage {
+.passage_bis {
 	display: none;
+}
+
+/* footer */
+
+.footer {
+	margin-top: 300px;
+	color: white;
 }
