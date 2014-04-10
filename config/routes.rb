@@ -6,7 +6,11 @@ resources :messages, only: [:new, :create]
   # You can have the root of your site routed with "root"
   root 'message#new'
 
-  get '/adresses' => 'adresses#index'
+  get '/appartements' => 'appartements#index'
+  get '/interieurs1' => 'interieurs1#index'
+  get '/interieurs2' => 'interieurs2#index'
+  get '/exterieurs1' => 'exterieurs1#index'
+  get '/exterieurs2' => 'exterieurs2#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

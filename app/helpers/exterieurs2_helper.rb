@@ -1,0 +1,2 @@
+module Exterieurs2Helper
+end
