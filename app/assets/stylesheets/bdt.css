@@ -8,8 +8,8 @@ body {
 	background-color: black;
 }
 
-.panel {
-	margin-left: 100px;
+.form-control {
+	text-align: center;
 	margin-right: 100px;
 }
 
