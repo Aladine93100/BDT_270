@@ -1,5 +1,5 @@
 <div id="webcam">
-	<p>Capture image here!</p>
+	<input type="file" accept="image/*" capture="camera" id="capture"> 
 </div>
 
 <%= form_for(save_image_pictures_path, :method => "post", :remote => true) do |f|%>

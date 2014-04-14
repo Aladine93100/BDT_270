@@ -1,5 +1,4 @@
 class Inquiry
-  require 'base64'
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
@@ -8,19 +7,19 @@ class Inquiry
   attr_accessor :nom, :prénom, :téléphone, :voie, :message
   
   validates :nom, 
-  :presence => true
+            :presence => true
   
   validates :prénom,
-  :presence => true
+            :presence => true
 
   validates :téléphone, 
-  :presence => true
+            :presence => true
   
   validates :voie,
-  :presence => true
+            :presence => true
   
   validates :message,
-  :length => { :minimum => 10, :maximum => 1000 }
+            :length => { :minimum => 10, :maximum => 1000 }
   
   def initialize(attributes = {})
     attributes.each do |name, value|
@@ -36,23 +35,10 @@ class Inquiry
       :subject => "Website inquiry",
       :body => message,
       :html_body => simple_format(message)
-      })
+    })
   end
-
-  def capture
-      # do something
-      render :layout => "webcam"
-    end
-
-    def save_image
-      image = params[:capture][:image]
-      File.open("#{Rails.root}/public/pictures/image_name.png", 'wb') do |f|
-        f.write(Base64.decode64(image))
-      end
-  # Or use paperclip to save image for a model instead!!
-
+      
   def persisted?
     false
   end
-end
 end
