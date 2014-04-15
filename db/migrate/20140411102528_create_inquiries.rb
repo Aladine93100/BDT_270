@@ -1,13 +1,13 @@
 class CreateInquiries < ActiveRecord::Migration
   def change
-    create_table :inquiries do |f|
-      f.string :nom
-      f.string :prénom
-      f.string :téléphone
-      f.string :voie
-      f.string :message
+    create_table :inquiries do |t|
+      t.string :nom
+      t.string :prénom
+      t.string :téléphone
+      t.string :voie
+      t.string :message
 
-      f.timestamps
+      t.timestamps
     end
   end
 end

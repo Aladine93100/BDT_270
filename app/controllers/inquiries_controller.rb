@@ -1,28 +1,31 @@
 class InquiriesController < ApplicationController
-  require 'base64'
-  def capture
-      # do something
-      render :layout => "webcam"
-    end
-
-    def save_image
-  image = params[:capture][:image]
-  File.open("#{Rails.root}/public/pictures/image_name.png", 'wb') do |f|
-    f.write(Base64.decode64(image))
+ def upload
+  File.open(upload_path, 'w') do |f|
+    f.write request.raw_post
   end
-  # Or use paperclip to save image for a model instead!!
+  render :text => "ok"
+end
 
-      def new
-        inquiry = Inquiry.new
-      end
+private
 
-      def create
-        @inquiry = Inquiry.new(params[:inquiry])
-        if @inquiry.deliver
-          render :thank_you
-        else
-          render :new
-        end
-      end
-    end
-  end
+def upload_path # is used in upload and create
+  file_name = session[:session_id].to_s + '.jpg'
+  File.join(RAILS_ROOT, 'public', 'uploads', file_name)
+end
+
+def create
+  @inquiry = Inquiry.new(params[:inquiry])
+  @inquiry.image = File.new(upload_path)
+  @inquiry.save
+
+  redirect_to @photo
+end
+
+def show
+  @inquiry = Inquiry.find(params[:id])
+end
+
+def index
+  @inquiries = Inquiry.all
+end
+end

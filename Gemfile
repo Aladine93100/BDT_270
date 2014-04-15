@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 gem 'pony', '~> 1.8'
 gem 'rubysl-base64', '~> 2.0.0'
+gem 'paperclip', '~> 2.3'
 
 
 # Use sqlite3 as the database for Active Record

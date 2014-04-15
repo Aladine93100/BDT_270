@@ -1,0 +1,9 @@
+<h1>All photos</h1>
+<p>
+  <% @inquiries.each do |inquiry| %>
+    <%= link_to image_tag(inquiry.image.url(:thumb)), inquiry %>
+  <% end %>
+</p>
+<p>
+  <%= link_to "Take a new picture", new_inquiry_path %>
+</p>

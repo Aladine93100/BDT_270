@@ -1,13 +1,10 @@
 Bdt270::Application.routes.draw do
-resources :inquiries, :only => [:new, :create] do
-  get 'thank_you', :on => :collection
+resources :inquiries, :only => [:index, :show, :new, :create] do  
+  collection do
+  get 'capture'
+  post 'save_image'
+  post 'upload'
 end  
-
-resources :pictures do
-  collection do 
-    get 'capture'
-    post 'save_image'
-  end
 end
 
 # The priority is based upon order of creation: first created -> highest priority.
