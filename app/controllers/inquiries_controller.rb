@@ -1,31 +1,30 @@
 class InquiriesController < ApplicationController
- def upload
-  File.open(upload_path, 'w') do |f|
-    f.write request.raw_post
+  def create
+    @inquiry = Inquiry.new(params[:inquiry])
+    @inquiry.image = File.new(upload_path)
+    @inquiry.save
+
+    redirect_to @inquiry
   end
-  render :text => "ok"
-end
 
-private
+  def show
+    @inquiry = Inquiry.find(params[:id])
+  end
 
-def upload_path # is used in upload and create
-  file_name = session[:session_id].to_s + '.jpg'
-  File.join(RAILS_ROOT, 'public', 'uploads', file_name)
-end
+  def index
+    @inquiries = Inquiry.all
+  end
 
-def create
-  @inquiry = Inquiry.new(params[:inquiry])
-  @inquiry.image = File.new(upload_path)
-  @inquiry.save
+  def upload
+    File.open(upload_path, 'wb') do |f|
+      f.write request.raw_post
+    end
+    render :text => "ok"
+  end
 
-  redirect_to @photo
-end
+  private
 
-def show
-  @inquiry = Inquiry.find(params[:id])
-end
-
-def index
-  @inquiries = Inquiry.all
-end
+  def upload_path # is used in upload and create
+    File.join(Rails.root, 'tmp', 'photo.jpg')
+  end
 end
