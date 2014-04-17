@@ -27,12 +27,4 @@ ActiveRecord::Schema.define(version: 20140415090347) do
     t.datetime "image_updated_at"
   end
 
-  create_table "messages", force: true do |t|
-    t.string   "name"
-    t.string   "city"
-    t.string   "age"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
