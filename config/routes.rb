@@ -13,11 +13,11 @@ end
   # You can have the root of your site routed with "root"
   root 'inquiries#new'
 
-match '/appartements', to: 'appartements#index', via: 'get'
-match '/interieurs1',  to: 'interieurs1#index',  via: 'get'
-match '/interieurs2',  to: 'interieurs2#index',  via: 'get'
-match '/exterieurs1'   to: 'exterieurs1#index',  via: 'get'
-match '/exterieurs2'   to: 'exterieurs2#index',  via: 'get'
+# match '/appartements', to: 'appartements#index', via: 'get'
+# match '/interieurs1',  to: 'interieurs1#index',  via: 'get'
+# match '/interieurs2',  to: 'interieurs2#index',  via: 'get'
+# match '/exterieurs1'   to: 'exterieurs1#index',  via: 'get'
+# match '/exterieurs2'   to: 'exterieurs2#index',  via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
