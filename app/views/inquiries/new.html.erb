@@ -1,8 +1,4 @@
-<div class="page-header">
-	<h1>Amicale des Beaudottes</h1>  <button id="retour" <%= link_to "Retour", root_path %> </button>
-</div>
-
-
+<div class="container text-center">
 <div class="row menu1">
 	<div class="col-md-offset-4 col-md-4 col-md-offset-4">
 		<button type="button" class="btn btn-default">Mon appartement</button></br>
@@ -38,7 +34,7 @@
 <div class="row">
 	<div class="questionnaire2 text-center">
 		<button type="button" class="btn btn-default hall1"> Hall d'entrée </button> <button type="button" class="btn btn-default hall2"> Hall à l'étage</button>
-	</div>	
+	</div>
 	<div id="hall1-bis">
 		<form action=''>
 			<input type="texte" value="nom"> </br>
@@ -159,3 +155,35 @@
 </div>
 </div>
 </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var form = $('#form'); // contact form
+  var submit = $('#submit');  // submit button
+  var alert = $('.alert'); // alert div for show alert message
+
+  // form submit event
+  form.on('submit', function(e) {
+    e.preventDefault(); // prevent default form submit
+
+    $.ajax({
+      url: '', // form action url
+      type: 'POST', // form submit method get/post
+      dataType: 'html', // request type html/json/xml
+      data: form.serialize(), // serialize form data 
+      beforeSend: function() {
+        alert.fadeOut();
+        submit.html('Sending....'); // change submit button text
+      },
+      success: function(data) {
+        alert.html(data).fadeIn(); // fade in response data
+        form.trigger('reset'); // reset form
+        submit.html('Send Email'); // reset submit button text
+      },
+      error: function(e) {
+        console.log(e)
+      }
+    });
+  });
+});
+</script>
